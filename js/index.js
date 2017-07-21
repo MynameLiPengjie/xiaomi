@@ -259,15 +259,4 @@ $('#zb').on('mouseenter','li',function(){
     var index=$(this).index();
     $('.box-rt-3>ul').eq(index).show().siblings().hide();
 });
-/*视频模态框开关.视频播放开关*/
-$('.video-list').on('click','li',function(){
-    var index=$(this).index();
-    var content=$(this).find('h3').text();
-    $(".modal-hd").find('h3').html(content);
-   $('.modal-bd').find('video').eq(index).show().siblings().hide();
-    $('.modal').fadeIn();
-});
-$('.close').click(function(){
-    $('.modal').fadeOut();
-   $('video').trigger('pause');
-});
+
